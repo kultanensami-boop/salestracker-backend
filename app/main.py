@@ -1,3 +1,8 @@
+from app.database import Base, engine
+
+# Luo tietokantataulut automaattisesti
+Base.metadata.create_all(bind=engine)
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
